@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieHub - Kontak Kami</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>MovieHub</h1>
+        <p>Tempat Terbaik untuk Menonton Film Favorit Anda</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="#">Film Populer</a></li>
+            <li><a href="#">Kategori</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Kategori</h2>
+            <ul>
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Drama</a></li>
+                <li><a href="#">Komedi</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h2>Hubungi Kami</h2>
+            <p>Jika Anda memiliki pertanyaan atau saran, silakan kirim pesan ke WhatsApp kami melalui formulir di bawah ini:</p>
+
+            <form id="formWA">
+                <label for="nama">Nama:</label><br>
+                <input type="text" id="nama" name="nama" required><br><br>
+
+                <label for="pesan">Pesan:</label><br>
+                <textarea id="pesan" name="pesan" rows="5" required></textarea><br><br>
+
+                <button type="submit" style="padding: 10px 20px; background-color: #ff0000; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    Kirim ke WhatsApp
+                </button>
+            </form>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 MovieHub - Semua Hak Dilindungi</p>
+    </footer>
+
+    <script>
+        document.getElementById("formWA").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+         
+            var nama = document.getElementById("nama").value;
+            var pesan = document.getElementById("pesan").value;
+
+            var noWA = "6285895084755"; 
+
+            var teks = `Halo, saya ${nama}.%0A${pesan}`;
+
+            window.open(`https://wa.me/${6285895084755}?text=${teks}`, "_blank");
+        });
+    </script>
